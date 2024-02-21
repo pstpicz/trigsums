@@ -1,0 +1,26 @@
+\begin{theindex}
+
+  \item {trg\+\_\+d\+\_\+s\+\_\+goertzel}
+    \subitem {trgsum.\+c}, \hyperpage{8}
+    \subitem {trgsum.\+h}, \hyperpage{11}
+  \item {trg\+\_\+d\+\_\+s\+\_\+reinsch}
+    \subitem {trgsum.\+c}, \hyperpage{8}
+    \subitem {trgsum.\+h}, \hyperpage{13}
+  \item {trg\+\_\+d\+\_\+v\+\_\+goertzel}
+    \subitem {trgsum.\+c}, \hyperpage{10}
+    \subitem {trgsum.\+h}, \hyperpage{13}
+  \item {trg\+\_\+d\+\_\+v\+\_\+reinsch}
+    \subitem {trgsum.\+c}, \hyperpage{10}
+    \subitem {trgsum.\+h}, \hyperpage{14}
+  \item {trgsum.\+c}, \hyperpage{7}
+    \subitem {trg\+\_\+d\+\_\+s\+\_\+goertzel}, \hyperpage{8}
+    \subitem {trg\+\_\+d\+\_\+s\+\_\+reinsch}, \hyperpage{8}
+    \subitem {trg\+\_\+d\+\_\+v\+\_\+goertzel}, \hyperpage{10}
+    \subitem {trg\+\_\+d\+\_\+v\+\_\+reinsch}, \hyperpage{10}
+  \item {trgsum.\+h}, \hyperpage{11}
+    \subitem {trg\+\_\+d\+\_\+s\+\_\+goertzel}, \hyperpage{11}
+    \subitem {trg\+\_\+d\+\_\+s\+\_\+reinsch}, \hyperpage{13}
+    \subitem {trg\+\_\+d\+\_\+v\+\_\+goertzel}, \hyperpage{13}
+    \subitem {trg\+\_\+d\+\_\+v\+\_\+reinsch}, \hyperpage{14}
+
+\end{theindex}

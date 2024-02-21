@@ -1,0 +1,199 @@
+\hypertarget{trgsum_8h}{}\doxysection{trgsum.\+h File Reference}
+\label{trgsum_8h}\index{trgsum.h@{trgsum.h}}
+
+
+Function prototypes for the package \char`\"{}\+Trigonemetric sums\char`\"{}.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{trgsum_8h_a793af52164fa8890730ea30d77106519}{trg\+\_\+d\+\_\+s\+\_\+goertzel}} (double x, int n, double $\ast$b, double $\ast$cx, double $\ast$sx)
+\begin{DoxyCompactList}\small\item\em Implementation of basic sequential Goertzel algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{trgsum_8h_a3027cd2b9e64c3e87bd4979d0d1581ff}{trg\+\_\+d\+\_\+v\+\_\+goertzel}} (double x, int n, double $\ast$b, double $\ast$cx, double $\ast$sx)
+\begin{DoxyCompactList}\small\item\em Implementation of vectorized Goertzel algorithm introduced by Stpiczynski. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{trgsum_8h_a9909042055a06842abd03f19ec9ce337}{trg\+\_\+d\+\_\+p\+\_\+goertzel}} (double x, int n, double $\ast$b, double $\ast$cx, double $\ast$sx, int p)
+\begin{DoxyCompactList}\small\item\em Implementation of parallel vectorized Goertzel algorithm introduced by Stpiczynski. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{trgsum_8h_a4a63bd12547b5df7a997ae6b12d3b9b4}{trg\+\_\+d\+\_\+s\+\_\+reinsch}} (double x, int n, double $\ast$b, double $\ast$cx, double $\ast$sx)
+\begin{DoxyCompactList}\small\item\em Implementation of basic sequential Reinschalgorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{trgsum_8h_a08a781d3280d412b61f32a63d4f447ce}{trg\+\_\+d\+\_\+v\+\_\+reinsch}} (double x, int n, double $\ast$b, double $\ast$cx, double $\ast$sx)
+\begin{DoxyCompactList}\small\item\em Implementation of vectorized Reinsch algorithm introduced by Stpiczynski. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{trgsum_8h_a2e6af04e20e6024bb09f49be432c350d}{trg\+\_\+d\+\_\+p\+\_\+reinsch}} (double x, int n, double $\ast$b, double $\ast$cx, double $\ast$sx, int p)
+\begin{DoxyCompactList}\small\item\em Implementation of parallel vectorized Reinsch algorithm introduced by Stpiczynski. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Function prototypes for the package \char`\"{}\+Trigonemetric sums\char`\"{}. 
+
+It contains sequential and vectorized implementations of Goertzel and Reinsch algorithms for finding trigonometric sums\+: \begin{DoxyVerb}  C(x) = b_0 cos(0) + b_1 cos(x) + b_2 cos(2x) +...+ b_n cos(nx)
+  S(x) =              b_1 sin(x) + b_2 sin(2x) +...+ b_n sin(nx)
+\end{DoxyVerb}
+ \begin{DoxyAuthor}{Author}
+Przemyslaw Stpiczynski 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000002}{Bug}}]No known bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{trgsum_8h_a9909042055a06842abd03f19ec9ce337}\label{trgsum_8h_a9909042055a06842abd03f19ec9ce337}} 
+\index{trgsum.h@{trgsum.h}!trg\_d\_p\_goertzel@{trg\_d\_p\_goertzel}}
+\index{trg\_d\_p\_goertzel@{trg\_d\_p\_goertzel}!trgsum.h@{trgsum.h}}
+\doxysubsubsection{\texorpdfstring{trg\_d\_p\_goertzel()}{trg\_d\_p\_goertzel()}}
+{\footnotesize\ttfamily void trg\+\_\+d\+\_\+p\+\_\+goertzel (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{int}]{n,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{cx,  }\item[{double $\ast$}]{sx,  }\item[{int}]{p }\end{DoxyParamCaption})}
+
+
+
+Implementation of parallel vectorized Goertzel algorithm introduced by Stpiczynski. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Argument for C(x) and S(x) \\
+\hline
+{\em n} & Number of coefficients, b\+\_\+0,...,b\+\_\+n \\
+\hline
+{\em b} & Pointer to coefficients (should be allocated using \+\_\+mm\+\_\+malloc()) \\
+\hline
+{\em cx} & Pointer to computed C(x) \\
+\hline
+{\em sx} & Pointer to computed S(x) \\
+\hline
+{\em p} & Number of processors \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Implementation of parallel vectorized Goertzel algorithm introduced by Stpiczynski. \mbox{\Hypertarget{trgsum_8h_a2e6af04e20e6024bb09f49be432c350d}\label{trgsum_8h_a2e6af04e20e6024bb09f49be432c350d}} 
+\index{trgsum.h@{trgsum.h}!trg\_d\_p\_reinsch@{trg\_d\_p\_reinsch}}
+\index{trg\_d\_p\_reinsch@{trg\_d\_p\_reinsch}!trgsum.h@{trgsum.h}}
+\doxysubsubsection{\texorpdfstring{trg\_d\_p\_reinsch()}{trg\_d\_p\_reinsch()}}
+{\footnotesize\ttfamily void trg\+\_\+d\+\_\+p\+\_\+reinsch (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{int}]{n,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{cx,  }\item[{double $\ast$}]{sx,  }\item[{int}]{p }\end{DoxyParamCaption})}
+
+
+
+Implementation of parallel vectorized Reinsch algorithm introduced by Stpiczynski. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Argument for C(x) and S(x) \\
+\hline
+{\em n} & Number of coefficients, b\+\_\+0,...,b\+\_\+n \\
+\hline
+{\em b} & Pointer to coefficients (should be allocated using \+\_\+mm\+\_\+malloc()) \\
+\hline
+{\em cx} & Pointer to computed C(x) \\
+\hline
+{\em sx} & Pointer to computed S(x) \\
+\hline
+{\em p} & Number of processors \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Implementation of parallel vectorized Reinsch algorithm introduced by Stpiczynski. \mbox{\Hypertarget{trgsum_8h_a793af52164fa8890730ea30d77106519}\label{trgsum_8h_a793af52164fa8890730ea30d77106519}} 
+\index{trgsum.h@{trgsum.h}!trg\_d\_s\_goertzel@{trg\_d\_s\_goertzel}}
+\index{trg\_d\_s\_goertzel@{trg\_d\_s\_goertzel}!trgsum.h@{trgsum.h}}
+\doxysubsubsection{\texorpdfstring{trg\_d\_s\_goertzel()}{trg\_d\_s\_goertzel()}}
+{\footnotesize\ttfamily void trg\+\_\+d\+\_\+s\+\_\+goertzel (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{int}]{n,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{cx,  }\item[{double $\ast$}]{sx }\end{DoxyParamCaption})}
+
+
+
+Implementation of basic sequential Goertzel algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Argument for C(x) and S(x) \\
+\hline
+{\em n} & Number of coefficients, b\+\_\+0,...,b\+\_\+n \\
+\hline
+{\em b} & Pointer to coefficients \\
+\hline
+{\em cx} & Pointer to computed C(x) \\
+\hline
+{\em sx} & Pointer to computed S(x) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{trgsum_8h_a4a63bd12547b5df7a997ae6b12d3b9b4}\label{trgsum_8h_a4a63bd12547b5df7a997ae6b12d3b9b4}} 
+\index{trgsum.h@{trgsum.h}!trg\_d\_s\_reinsch@{trg\_d\_s\_reinsch}}
+\index{trg\_d\_s\_reinsch@{trg\_d\_s\_reinsch}!trgsum.h@{trgsum.h}}
+\doxysubsubsection{\texorpdfstring{trg\_d\_s\_reinsch()}{trg\_d\_s\_reinsch()}}
+{\footnotesize\ttfamily void trg\+\_\+d\+\_\+s\+\_\+reinsch (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{int}]{n,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{cx,  }\item[{double $\ast$}]{sx }\end{DoxyParamCaption})}
+
+
+
+Implementation of basic sequential Reinschalgorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Argument for C(x) and S(x) \\
+\hline
+{\em n} & Number of coefficients, b\+\_\+0,...,b\+\_\+n \\
+\hline
+{\em b} & Pointer to coefficients \\
+\hline
+{\em cx} & Pointer to computed C(x) \\
+\hline
+{\em sx} & Pointer to computed S(x) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Implementation of basic sequential Reinschalgorithm. \mbox{\Hypertarget{trgsum_8h_a3027cd2b9e64c3e87bd4979d0d1581ff}\label{trgsum_8h_a3027cd2b9e64c3e87bd4979d0d1581ff}} 
+\index{trgsum.h@{trgsum.h}!trg\_d\_v\_goertzel@{trg\_d\_v\_goertzel}}
+\index{trg\_d\_v\_goertzel@{trg\_d\_v\_goertzel}!trgsum.h@{trgsum.h}}
+\doxysubsubsection{\texorpdfstring{trg\_d\_v\_goertzel()}{trg\_d\_v\_goertzel()}}
+{\footnotesize\ttfamily void trg\+\_\+d\+\_\+v\+\_\+goertzel (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{int}]{n,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{cx,  }\item[{double $\ast$}]{sx }\end{DoxyParamCaption})}
+
+
+
+Implementation of vectorized Goertzel algorithm introduced by Stpiczynski. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Argument for C(x) and S(x) \\
+\hline
+{\em n} & Number of coefficients, b\+\_\+0,...,b\+\_\+n \\
+\hline
+{\em b} & Pointer to coefficients (should be allocated using \+\_\+mm\+\_\+malloc()) \\
+\hline
+{\em cx} & Pointer to computed C(x) \\
+\hline
+{\em sx} & Pointer to computed S(x) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Implementation of vectorized Goertzel algorithm introduced by Stpiczynski. \mbox{\Hypertarget{trgsum_8h_a08a781d3280d412b61f32a63d4f447ce}\label{trgsum_8h_a08a781d3280d412b61f32a63d4f447ce}} 
+\index{trgsum.h@{trgsum.h}!trg\_d\_v\_reinsch@{trg\_d\_v\_reinsch}}
+\index{trg\_d\_v\_reinsch@{trg\_d\_v\_reinsch}!trgsum.h@{trgsum.h}}
+\doxysubsubsection{\texorpdfstring{trg\_d\_v\_reinsch()}{trg\_d\_v\_reinsch()}}
+{\footnotesize\ttfamily void trg\+\_\+d\+\_\+v\+\_\+reinsch (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{int}]{n,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{cx,  }\item[{double $\ast$}]{sx }\end{DoxyParamCaption})}
+
+
+
+Implementation of vectorized Reinsch algorithm introduced by Stpiczynski. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Argument for C(x) and S(x) \\
+\hline
+{\em n} & Number of coefficients, b\+\_\+0,...,b\+\_\+n \\
+\hline
+{\em b} & Pointer to coefficients (should be allocated using \+\_\+mm\+\_\+malloc()) \\
+\hline
+{\em cx} & Pointer to computed C(x) \\
+\hline
+{\em sx} & Pointer to computed S(x) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+Implementation of vectorized Reinsch algorithm introduced by Stpiczynski. 

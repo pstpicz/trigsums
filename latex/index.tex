@@ -1,0 +1,10 @@
+\begin{DoxyAuthor}{Author}
+Przemyslaw Stpiczynski
+\end{DoxyAuthor}
+The package contains sequential and vectorized implementations of Goertzel and Reinsch algorithms for finding trigonometric sums\+:
+
+C(x) = b\+\_\+0 cos(0) + b\+\_\+1 cos(x) + b\+\_\+2 cos(2x) +...+ b\+\_\+n cos(nx)
+
+S(x) = + b\+\_\+1 sin(x) + b\+\_\+2 sin(2x) +...+ b\+\_\+n sin(nx)
+
+The project utilizes AVX512 vector extensions. It should be compiled using Intel Ope\+API C/\+C++ Compiler. 

@@ -1,0 +1,129 @@
+\hypertarget{trgsum_8c}{}\doxysection{trgsum.\+c File Reference}
+\label{trgsum_8c}\index{trgsum.c@{trgsum.c}}
+
+
+Implementation of the package.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}immintrin.\+h\char`\"{}}\newline
+Include dependency graph for trgsum.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{trgsum_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{trgsum_8c_ae7d14b269dba0bd61ba4e55a0ceb295b}\label{trgsum_8c_ae7d14b269dba0bd61ba4e55a0ceb295b}} 
+\+\_\+\+\_\+inline void {\bfseries vec8x8\+\_\+transpose} (\+\_\+\+\_\+m512d $\ast$col0, \+\_\+\+\_\+m512d $\ast$col1, \+\_\+\+\_\+m512d $\ast$col2, \+\_\+\+\_\+m512d $\ast$col3, \+\_\+\+\_\+m512d $\ast$col4, \+\_\+\+\_\+m512d $\ast$col5, \+\_\+\+\_\+m512d $\ast$col6, \+\_\+\+\_\+m512d $\ast$col7)
+\begin{DoxyCompactList}\small\item\em Auxiliary function that transposes 8x8 matrix stored columnwise in eight variables of the type \+\_\+m512d. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{trgsum_8c_a793af52164fa8890730ea30d77106519}{trg\+\_\+d\+\_\+s\+\_\+goertzel}} (double x, int n, double $\ast$b, double $\ast$cx, double $\ast$sx)
+\begin{DoxyCompactList}\small\item\em Implementation of basic sequential Goertzel algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{trgsum_8c_a3027cd2b9e64c3e87bd4979d0d1581ff}{trg\+\_\+d\+\_\+v\+\_\+goertzel}} (double x, int n, double $\ast$b, double $\ast$cx, double $\ast$sx)
+\begin{DoxyCompactList}\small\item\em Implementation of vectorized Goertzel algorithm for x!=k$\ast$\+Pi. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{trgsum_8c_a9909042055a06842abd03f19ec9ce337}{trg\+\_\+d\+\_\+p\+\_\+goertzel}} (double x, int n, double $\ast$b, double $\ast$cx, double $\ast$sx, int p)
+\begin{DoxyCompactList}\small\item\em Implementation of parallel vectorized Goertzel algorithm for x!=k$\ast$\+Pi. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{trgsum_8c_a4a63bd12547b5df7a997ae6b12d3b9b4}{trg\+\_\+d\+\_\+s\+\_\+reinsch}} (double x, int n, double $\ast$b, double $\ast$cx, double $\ast$sx)
+\begin{DoxyCompactList}\small\item\em Implementation of basic sequential Reinsch algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{trgsum_8c_a08a781d3280d412b61f32a63d4f447ce}{trg\+\_\+d\+\_\+v\+\_\+reinsch}} (double x, int n, double $\ast$b, double $\ast$cx, double $\ast$sx)
+\begin{DoxyCompactList}\small\item\em Implementation of vectorized Reinsch algorithm for x!=k$\ast$\+Pi. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{trgsum_8c_a2e6af04e20e6024bb09f49be432c350d}{trg\+\_\+d\+\_\+p\+\_\+reinsch}} (double x, int n, double $\ast$b, double $\ast$cx, double $\ast$sx, int p)
+\begin{DoxyCompactList}\small\item\em Implementation of parallel vectorized Reinsch algorithm for x!=k$\ast$\+Pi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the package. 
+
+The file contains implementation of all functions.
+
+\begin{DoxyAuthor}{Author}
+Przemyslaw Stpiczynski 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]No know bugs. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{trgsum_8c_a9909042055a06842abd03f19ec9ce337}\label{trgsum_8c_a9909042055a06842abd03f19ec9ce337}} 
+\index{trgsum.c@{trgsum.c}!trg\_d\_p\_goertzel@{trg\_d\_p\_goertzel}}
+\index{trg\_d\_p\_goertzel@{trg\_d\_p\_goertzel}!trgsum.c@{trgsum.c}}
+\doxysubsubsection{\texorpdfstring{trg\_d\_p\_goertzel()}{trg\_d\_p\_goertzel()}}
+{\footnotesize\ttfamily void trg\+\_\+d\+\_\+p\+\_\+goertzel (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{int}]{n,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{cx,  }\item[{double $\ast$}]{sx,  }\item[{int}]{p }\end{DoxyParamCaption})}
+
+
+
+Implementation of parallel vectorized Goertzel algorithm for x!=k$\ast$\+Pi. 
+
+Implementation of parallel vectorized Goertzel algorithm introduced by Stpiczynski. \mbox{\Hypertarget{trgsum_8c_a2e6af04e20e6024bb09f49be432c350d}\label{trgsum_8c_a2e6af04e20e6024bb09f49be432c350d}} 
+\index{trgsum.c@{trgsum.c}!trg\_d\_p\_reinsch@{trg\_d\_p\_reinsch}}
+\index{trg\_d\_p\_reinsch@{trg\_d\_p\_reinsch}!trgsum.c@{trgsum.c}}
+\doxysubsubsection{\texorpdfstring{trg\_d\_p\_reinsch()}{trg\_d\_p\_reinsch()}}
+{\footnotesize\ttfamily void trg\+\_\+d\+\_\+p\+\_\+reinsch (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{int}]{n,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{cx,  }\item[{double $\ast$}]{sx,  }\item[{int}]{p }\end{DoxyParamCaption})}
+
+
+
+Implementation of parallel vectorized Reinsch algorithm for x!=k$\ast$\+Pi. 
+
+Implementation of parallel vectorized Reinsch algorithm introduced by Stpiczynski. \mbox{\Hypertarget{trgsum_8c_a793af52164fa8890730ea30d77106519}\label{trgsum_8c_a793af52164fa8890730ea30d77106519}} 
+\index{trgsum.c@{trgsum.c}!trg\_d\_s\_goertzel@{trg\_d\_s\_goertzel}}
+\index{trg\_d\_s\_goertzel@{trg\_d\_s\_goertzel}!trgsum.c@{trgsum.c}}
+\doxysubsubsection{\texorpdfstring{trg\_d\_s\_goertzel()}{trg\_d\_s\_goertzel()}}
+{\footnotesize\ttfamily void trg\+\_\+d\+\_\+s\+\_\+goertzel (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{int}]{n,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{cx,  }\item[{double $\ast$}]{sx }\end{DoxyParamCaption})}
+
+
+
+Implementation of basic sequential Goertzel algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Argument for C(x) and S(x) \\
+\hline
+{\em n} & Number of coefficients, b\+\_\+0,...,b\+\_\+n \\
+\hline
+{\em b} & Pointer to coefficients \\
+\hline
+{\em cx} & Pointer to computed C(x) \\
+\hline
+{\em sx} & Pointer to computed S(x) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{trgsum_8c_a4a63bd12547b5df7a997ae6b12d3b9b4}\label{trgsum_8c_a4a63bd12547b5df7a997ae6b12d3b9b4}} 
+\index{trgsum.c@{trgsum.c}!trg\_d\_s\_reinsch@{trg\_d\_s\_reinsch}}
+\index{trg\_d\_s\_reinsch@{trg\_d\_s\_reinsch}!trgsum.c@{trgsum.c}}
+\doxysubsubsection{\texorpdfstring{trg\_d\_s\_reinsch()}{trg\_d\_s\_reinsch()}}
+{\footnotesize\ttfamily void trg\+\_\+d\+\_\+s\+\_\+reinsch (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{int}]{n,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{cx,  }\item[{double $\ast$}]{sx }\end{DoxyParamCaption})}
+
+
+
+Implementation of basic sequential Reinsch algorithm. 
+
+Implementation of basic sequential Reinschalgorithm. \mbox{\Hypertarget{trgsum_8c_a3027cd2b9e64c3e87bd4979d0d1581ff}\label{trgsum_8c_a3027cd2b9e64c3e87bd4979d0d1581ff}} 
+\index{trgsum.c@{trgsum.c}!trg\_d\_v\_goertzel@{trg\_d\_v\_goertzel}}
+\index{trg\_d\_v\_goertzel@{trg\_d\_v\_goertzel}!trgsum.c@{trgsum.c}}
+\doxysubsubsection{\texorpdfstring{trg\_d\_v\_goertzel()}{trg\_d\_v\_goertzel()}}
+{\footnotesize\ttfamily void trg\+\_\+d\+\_\+v\+\_\+goertzel (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{int}]{n,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{cx,  }\item[{double $\ast$}]{sx }\end{DoxyParamCaption})}
+
+
+
+Implementation of vectorized Goertzel algorithm for x!=k$\ast$\+Pi. 
+
+Implementation of vectorized Goertzel algorithm introduced by Stpiczynski. \mbox{\Hypertarget{trgsum_8c_a08a781d3280d412b61f32a63d4f447ce}\label{trgsum_8c_a08a781d3280d412b61f32a63d4f447ce}} 
+\index{trgsum.c@{trgsum.c}!trg\_d\_v\_reinsch@{trg\_d\_v\_reinsch}}
+\index{trg\_d\_v\_reinsch@{trg\_d\_v\_reinsch}!trgsum.c@{trgsum.c}}
+\doxysubsubsection{\texorpdfstring{trg\_d\_v\_reinsch()}{trg\_d\_v\_reinsch()}}
+{\footnotesize\ttfamily void trg\+\_\+d\+\_\+v\+\_\+reinsch (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{int}]{n,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{cx,  }\item[{double $\ast$}]{sx }\end{DoxyParamCaption})}
+
+
+
+Implementation of vectorized Reinsch algorithm for x!=k$\ast$\+Pi. 
+
+Implementation of vectorized Reinsch algorithm introduced by Stpiczynski. 
