@@ -2,7 +2,8 @@
 
 This repo contains software for computing trigonometric sums using the Goertzel and Reinsch algorithms.
 
-Paper "Parallel Vectorized Algorithms for Computing Trigonometric Sums Using AVX-512 Extensions" has been submitted to ICCS 2024 https://www.iccs-meeting.org/iccs2024/
+Paper "Parallel Vectorized Algorithms for Computing Trigonometric Sums Using AVX-512 Extensions" has been accepted to ICCS 2024 https://www.iccs-meeting.org/iccs2024/ and 
+published in LNCS DOI: 10.1007/978-3-031-63778-0_12
 
 ### Requirements ###
 
